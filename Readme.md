@@ -1,5 +1,5 @@
 
-# which.c
+# which
 
   Lookup executable via __PATH__ environment variable or a given path string.
 
