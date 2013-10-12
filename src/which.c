@@ -11,6 +11,12 @@
 #include <string.h>
 #include "which.h"
 
+#ifdef _WIN32
+#define DELIMITER   ";"
+#else
+#define DELIMITER   ":"
+#endif
+
 /*
  * Lookup executable `name` within the PATH environment variable.
  */
@@ -26,7 +32,7 @@ which(char *name) {
 
 char *
 which_path(char *name, char *path) {
-  char *tok = strtok(path, ":");
+  char *tok = strtok(path, DELIMITER);
 
   while (tok) {
     // path
@@ -41,7 +47,7 @@ which_path(char *name, char *path) {
     }
 
     // next token
-    tok = strtok(NULL, ":");
+    tok = strtok(NULL, DELIMITER);
     free(file);
   }
 
