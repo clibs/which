@@ -11,10 +11,12 @@
 #include <string.h>
 #include "which.h"
 
+// delimiter
+
 #ifdef _WIN32
-#define DELIMITER   ";"
+#define WHICH_DELIMITER   ";"
 #else
-#define DELIMITER   ":"
+#define WHICH_DELIMITER   ":"
 #endif
 
 /*
@@ -32,7 +34,7 @@ which(char *name) {
 
 char *
 which_path(char *name, char *path) {
-  char *tok = strtok(path, DELIMITER);
+  char *tok = strtok(path, WHICH_DELIMITER);
 
   while (tok) {
     // path
@@ -47,7 +49,7 @@ which_path(char *name, char *path) {
     }
 
     // next token
-    tok = strtok(NULL, DELIMITER);
+    tok = strtok(NULL, WHICH_DELIMITER);
     free(file);
   }
 
