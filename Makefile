@@ -1,5 +1,15 @@
 
-example: example.c src/which.c
-	$(CC) -std=c99 $^ -o $@
+SRC = $(wildcard src/*.c)
+CFLAGS = -std=c99 -Wall
 
-.PHONY: example
+example: example.c $(SRC)
+	$(CC) $(CFLAGS) $^ -o $@
+
+test: test.c $(SRC)
+	$(CC) $(CFLAGS) $^ -o $@
+	./$@
+
+clean:
+	rm -f example test
+
+.PHONY: example test clean
