@@ -6,8 +6,8 @@ example: example.c $(SRC)
 	$(CC) $(CFLAGS) $^ -o $@
 
 test: test.c $(SRC)
-	$(CC) $(CFLAGS) $^ -o $@
-	./$@
+	@$(CC) $(CFLAGS) $^ -o $@
+	@./$@
 
 clean:
 	rm -f example test
