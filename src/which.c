@@ -53,5 +53,7 @@ which_path(const char *name, const char *_path) {
     free(file);
   }
 
+  free(path);
+
   return NULL;
 }
