@@ -24,6 +24,7 @@
 #define describe(title, fn) ({ \
   printf("\n  %s\n", title); \
   fn; \
+  printf("\n"); \
 });
 
 /*
