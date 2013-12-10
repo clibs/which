@@ -1,6 +1,6 @@
 
 //
-// term.h
+// which.h
 //
 // Copyright (c) 2013 TJ Holowaychuk <tj@vision-media.ca>
 //
