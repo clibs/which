@@ -9,9 +9,9 @@
 #define WHICH_H
 
 char *
-which(char *name);
+which(const char *name);
 
 char *
-which_path(char *name, char *path);
+which_path(const char *name, const char *path);
 
 #endif /* WHICH_H */

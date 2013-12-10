@@ -23,7 +23,7 @@
  */
 
 char *
-which(char *name) {
+which(const char *name) {
   return which_path(name, getenv("PATH"));
 }
 
@@ -32,7 +32,8 @@ which(char *name) {
  */
 
 char *
-which_path(char *name, char *path) {
+which_path(const char *name, const char *_path) {
+  char *path = strdup(_path);
   char *tok = strtok(path, WHICH_DELIMITER);
 
   while (tok) {
