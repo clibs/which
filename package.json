@@ -5,5 +5,8 @@
   "description": "Locate executable via PATH or given string",
   "keywords": ["lookup", "which", "locate", "find", "path", "bin", "executable"],
   "license": "MIT",
-  "src": ["src/which.c", "src/which.h"]
+  "src": ["src/which.c", "src/which.h"],
+  "dependencies": {
+    "stephenmathieson/str-copy.c": "*"
+  }
 }

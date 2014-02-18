@@ -1,6 +1,7 @@
 
-SRC = $(wildcard src/*.c)
-CFLAGS = -std=c99 -Wall
+SRC  = $(wildcard src/*.c)
+SRC += $(wildcard deps/*/*.c)
+CFLAGS = -std=c99 -Wall -Ideps
 
 example: example.c $(SRC)
 	$(CC) $(CFLAGS) $^ -o $@
