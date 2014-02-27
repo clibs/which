@@ -15,5 +15,7 @@ main(int argc, char **argv) {
 
   printf("%s: %s\n", name, path ? path : "not found");
 
+  free(path);
+
   return 0;
 }
