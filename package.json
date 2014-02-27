@@ -8,5 +8,8 @@
   "src": ["src/which.c", "src/which.h"],
   "dependencies": {
     "stephenmathieson/str-copy.c": "*"
+  },
+  "development": {
+    "stephenmathieson/describe.h": "1.0.0"
   }
 }
