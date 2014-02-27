@@ -1,4 +1,13 @@
 
+0.1.2 / 2014-02-27
+==================
+
+ * travis: Install development deps
+ * Add travis
+ * Fix `path` leak
+ * Update describe.h to 1.0.0
+ * Ignore deps
+
 0.1.1 / 2014-02-18 
 ==================
 
