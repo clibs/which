@@ -7,7 +7,7 @@
   "license": "MIT",
   "src": ["src/which.c", "src/which.h"],
   "dependencies": {
-    "stephenmathieson/str-copy.c": "*"
+    "strdup": "0.0.0"
   },
   "development": {
     "stephenmathieson/describe.h": "1.0.0"
