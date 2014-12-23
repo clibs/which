@@ -10,7 +10,9 @@ describe("which", {
   });
 
   it("should return the path of the name", {
-    assert_str_equal("./test", which_path("test", mock_path));
+    char *bin = which_path("test", mock_path);
+    assert_str_equal("./test", bin);
+    free(bin);
   });
 
   it("should return NULL if the given name isn't executable", {
